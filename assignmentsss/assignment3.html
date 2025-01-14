@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer with Flexible Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px; /* Ensures sections stack on smaller screens */
+        }
+        .footer-section h3 {
+            margin-top: 0;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-section {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We provide top-quality services to our customers with utmost dedication and professionalism.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Main Street, City, Country</p>
+        </div>
+    </footer>
+</body>
+</html>
